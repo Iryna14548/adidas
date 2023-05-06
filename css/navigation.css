@@ -1,0 +1,182 @@
+/* Navigation */
+
+.navigation {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    z-index: 1;
+
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.navigation__right--items {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    justify-content: end;
+    padding: 10px 30px 0;
+}
+
+.navigation__right--items a {
+    color: var(--black);
+    text-decoration: none;
+    text-transform: lowercase;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.navigarion__wrapper {
+    display: flex;
+    padding: 0 30px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.logo__adidas {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.navigation__center--items {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation__center--items a {
+    color: var(--black);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 36px;
+    cursor: pointer;
+}
+
+.navigation__center--items a:hover {
+    text-decoration: underline;
+}
+
+.navigation__wrap-right {
+    display: flex;
+    align-items: center;
+}
+
+.input-search-wrap {
+    position: relative;
+    margin: 6px 10px 10px;
+}
+.input-search {
+    padding: 8px;
+    background-color: var(--gray__botton--search);
+    margin: 0;
+    border: 1px solid var(--gray__botton--search);
+    transition: border ease 1s;
+    outline: none;
+    padding-right: 30px;
+}
+
+.input-search:hover {
+    border: 1px solid #7e7c7c;
+}
+
+.input-search::placeholder {
+    color: var(--black);
+}
+.input-search:focus::placeholder {
+    color: transparent;
+}
+
+.searchIcon {
+    color: var(--black);
+    float: left;
+    font-size: 12px;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translate(0%, -50%);
+    font-size: 18px;
+    color: #4c4b4b;
+}
+
+.navigation__wrap-right--icons i {
+    cursor: pointer;
+    margin: 8px;
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 1224px) {
+    .navigation__center--items {
+        justify-content: flex-start;
+        padding-left: 20px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .navigation__center--items a {
+        font-size: 12px;
+    }
+
+    .logo__adidas {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media only screen and (max-width: 940px) {
+    .navigarion__wrapper {
+        flex-wrap: wrap;
+    }
+
+    .navigation__center--items {
+        gap: 12px;
+        padding-left: 0;
+    }
+    .logo__adidas {
+        padding-right: 20px;
+    }
+    .input-search {
+        padding: 0;
+        background-color: transparent;
+        cursor: pointer;
+        margin: 0;
+        border: none;
+        transition: none;
+        outline: none;
+        padding-right: 0;
+    }
+
+    .input-search-wrap {
+        margin: 0 2px;
+    }
+
+    .placeholder__mobile {
+        display: none;
+    }
+    .searchIcon {
+        margin-left: 38px;
+    }
+    .nav__wrap {
+        margin: 0 0px 3px 30px;
+    }
+    .navigation__right--items {
+        display: none;
+    }
+
+    .navigation__center--items a {
+        white-space: nowrap;
+    }
+    .navigation__center--items li:last-child {
+        margin-right: 30px;
+    }
+}
